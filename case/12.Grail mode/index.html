@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>课时12,圣杯布局</title>
+  <style type="text/css">
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .warp{
+      width: 700px;
+      margin: 0 auto;
+      border: 1px solid #000;
+    }
+    .top,
+    .foot{
+      width: 100%;
+      height: 100px;
+      background-color: skyblue;
+    }
+    .main .left,
+    .main .content,
+    .main .right{
+      float: left;
+      position: relative;
+      margin-bottom: -2000px;
+      padding-bottom: 2000px;
+    }
+    .main{
+      padding: 0 100px;
+      overflow: hidden;
+    }
+    .main .left{
+      left: -100px;
+      width: 100px;
+      background-color: yellow;
+    }
+    .main .content{
+      margin-left: -100px;
+      width: 100%;
+      height: 300px;
+      background-color: rgb(19, 191, 19)
+    }
+    .main .right{
+      left: 100px;
+      width: 100px;
+      margin-left: -100px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="warp">
+    <div class="top"></div>
+    <div class="main clearfix">
+      <div class="left">LEFT</div>
+      <div class="content">CONTENT<br />13445</div>
+      <div class="right">RIGHT</div>
+    </div>
+    <div class="foot"></div>
+  </div>
+  
+</body>
+</html>
